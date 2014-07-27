@@ -14,3 +14,5 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define CUSTOM_COLOR_BKG        [UIColor colorWithRed:(CGFloat)0xF0/0xFF green:(CGFloat)0xF0/0xFF blue:(CGFloat)0xF0/0xFF alpha:1]
