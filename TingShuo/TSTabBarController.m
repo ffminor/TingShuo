@@ -12,16 +12,7 @@
 
 - (void)viewDidLoad
 {
-    [super didReceiveMemoryWarning];
-
-    UIColor *_color = [UIColor colorWithRed:(CGFloat)0x16 / 0xff
-                                      green:(CGFloat)0x6d / 0xff
-                                       blue:(CGFloat)0xb4 / 0xff
-                                      alpha:1];
-    [self.navigationController.navigationBar setBarTintColor:_color];
-    UIImageView *_titleView = [[UIImageView alloc]
-                               initWithImage:[UIImage imageNamed:@"nav_title.png"]];
-    [self.navigationItem setTitleView:_titleView];
+    [super viewDidLoad];
     
     NSArray *_tabTitleArray = @[@"听说", @"拍卖", @"我的"];
     

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TSAuctionInfoViewController : UIViewController
+@interface TSAuctionInfoViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+{
+    UITableView                             *_auctionList;
+}
 
 @end

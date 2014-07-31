@@ -12,7 +12,7 @@
 
 @synthesize titleLabel = _titleLabel;
 @synthesize containerView = _containerView;
-@synthesize iconView = _iconView;
+@synthesize moreIcon = _moreIconView;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -22,7 +22,12 @@
         [self addSubview:_containerView];
         
         _titleLabel = [[UILabel alloc] init];
+        [_titleLabel setFont:[UIFont fontWithName:nil size:15]];
         [_containerView addSubview:_titleLabel];
+        
+        _moreIconView = [[UIImageView alloc] init];
+        [_moreIconView setImage:[UIImage imageNamed:@"icon_more.png"]];
+        [_containerView addSubview:_moreIconView];
     }
     
     return self;
@@ -30,22 +35,8 @@
 
 - (void)willDisplayCell
 {
-    [self setBackgroundColor:[UIColor grayColor]];
+    [self setBackgroundColor:CUSTOM_COLOR_BKG];
     [_containerView setBackgroundColor:[UIColor whiteColor]];
-    /*
-    UIView *_bkgView = [[UIView alloc] initWithFrame:self.contentView.frame];
-    [_bkgView setBackgroundColor:[UIColor grayColor]];
-    [self addSubview:_bkgView];
-    
-    CGRect _cntf = self.contentView.frame;
-    _cntf.origin.x += 2;
-    _cntf.origin.y += 2;
-    _cntf.size.width -= 4;
-    _cntf.size.height -= 4;
-    [self.contentView setFrame:_cntf];
-    
-    [self bringSubviewToFront:self.contentView];
-     */
 }
 
 - (void)layoutSubviews
@@ -53,14 +44,27 @@
     [super layoutSubviews];
     
     CGRect _contentFrame = self.bounds;
-    _contentFrame.origin.x = 5;
+    _contentFrame.origin.x = 10;
     _contentFrame.origin.y = 5;
-    _contentFrame.size.width -= 10;
+    _contentFrame.size.width -= 20;
     _contentFrame.size.height -= 10;
     [_containerView setFrame:_contentFrame];
     
-    [_titleLabel setFrame:_containerView.bounds];
+    CGRect _titleFrame = _containerView.bounds;
+    _titleFrame.origin.x = 10;
+    [_titleLabel setFrame:_titleFrame];
     
+    CGRect _iconFrame = _containerView.bounds;
+    _iconFrame.origin.x = _iconFrame.size.width - 5.5 - 15;
+    _iconFrame.origin.y = ( _iconFrame.size.height - 8.5 ) * 0.5;
+    _iconFrame.size.width = 5.5;
+    _iconFrame.size.height = 8.5;
+    [_moreIconView setFrame:_iconFrame];
+}
+
+- (void)hideMoreIcon:(BOOL)hide
+{
+    [_moreIconView setHidden:hide];
 }
 
 @end

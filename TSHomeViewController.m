@@ -17,10 +17,27 @@
     [super viewDidLoad];
     [self.navigationController.navigationBar setTranslucent:NO];
     
+    UIColor *_color = [UIColor colorWithRed:(CGFloat)0x16 / 0xff
+                                      green:(CGFloat)0x6d / 0xff
+                                       blue:(CGFloat)0xb4 / 0xff
+                                      alpha:1];
+    [self.navigationController.navigationBar setBarTintColor:_color];
+    UIImageView *_titleView = [[UIImageView alloc]
+                               initWithImage:[UIImage imageNamed:@"nav_title.png"]];
+    [self.navigationItem setTitleView:_titleView];
+    
+    UIButton *_topRight = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_topRight setFrame:CGRectMake(0, 0, 23, 23)];
+    [_topRight setImage:[UIImage imageNamed:@"nav_plus.png"] forState:UIControlStateNormal];
+    _plusButton = [[UIBarButtonItem alloc] initWithCustomView:_topRight];
+    self.navigationItem.rightBarButtonItem = _plusButton;
+    
     _tableView = [[UITableView alloc] init];
-    [_tableView setBackgroundColor:[UIColor grayColor]];
+    [_tableView setBackgroundColor:CUSTOM_COLOR_BKG];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
     [self.view addSubview:_tableView];
 }
 
@@ -71,12 +88,17 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TSBasicCell *_cell = (TSBasicCell *)cell;
+    [_cell willDisplayCell];
     if ( indexPath.row == 0 ) {
         [_cell.titleLabel setText:@"1条拍卖信息"];
     }
     
     if ( indexPath.row == 1 ) {
         [_cell.titleLabel setText:@"10条新信息"];
+    }
+    
+    if ( indexPath.row > 1 ) {
+        [_cell hideMoreIcon:YES];
     }
 }
 

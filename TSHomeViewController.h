@@ -11,6 +11,7 @@
 @interface TSHomeViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 {
     UITableView                     *_tableView;
+    UIBarButtonItem                 *_plusButton;
 }
 
 @end
