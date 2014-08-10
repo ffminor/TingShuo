@@ -27,6 +27,7 @@
         
         _moreIconView = [[UIImageView alloc] init];
         [_moreIconView setImage:[UIImage imageNamed:@"icon_more.png"]];
+        [_moreIconView setHidden:YES];
         [_containerView addSubview:_moreIconView];
     }
     

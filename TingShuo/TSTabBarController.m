@@ -14,6 +14,7 @@
 {
     [super viewDidLoad];
     
+    [self.navigationController.navigationBar setHidden:YES];
     NSArray *_tabTitleArray = @[@"听说", @"拍卖", @"我的"];
     
     [self.tabBar setBackgroundColor:[UIColor blueColor]];

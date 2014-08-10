@@ -1,15 +1,15 @@
 //
-//  TSAuctionInfoViewController.m
+//  TSStoryViewController.m
 //  TingShuo
 //
-//  Created by fminor on 7/20/14.
+//  Created by fminor on 8/4/14.
 //
 //
 
-#import "TSAuctionInfoViewController.h"
-#import "TSAuctionInfoCell.h"
+#import "TSStoryViewController.h"
+#import "TSHomeStoryCell.h"
 
-@implementation TSAuctionInfoViewController
+@implementation TSStoryViewController
 
 - (void)viewDidLoad
 {
@@ -33,13 +33,13 @@
     UIBarButtonItem *_leftItem = [[UIBarButtonItem alloc] initWithCustomView:_navBackButton];
     self.navigationItem.leftBarButtonItem = _leftItem;
     
-    _auctionList = [[UITableView alloc] initWithFrame:self.view.bounds
+    _storyList = [[UITableView alloc] initWithFrame:self.view.bounds
                                                 style:UITableViewStylePlain];
-    [_auctionList setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [_auctionList setBackgroundColor:CUSTOM_COLOR_BKG];
-    _auctionList.delegate = self;
-    _auctionList.dataSource = self;
-    [self.view addSubview:_auctionList];
+    [_storyList setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [_storyList setBackgroundColor:CUSTOM_COLOR_BKG];
+    _storyList.delegate = self;
+    _storyList.dataSource = self;
+    [self.view addSubview:_storyList];
     
     [self.view setBackgroundColor:CUSTOM_COLOR_BKG];
 }
@@ -53,31 +53,33 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 70.f;
+    return 120.f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *_identify = @"tsauctioncell";
-    TSAuctionInfoCell *_cell = [tableView dequeueReusableCellWithIdentifier:_identify];
+    NSString *_identifier = @"story_cell_story";
+    TSHomeStoryCell *_cell = [tableView dequeueReusableCellWithIdentifier:_identifier];
     if ( !_cell ) {
-        _cell = [[TSAuctionInfoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:_identify];
+        _cell = [[TSHomeStoryCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                       reuseIdentifier:_identifier];
     }
     return _cell;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TSAuctionInfoCell *_cell = (TSAuctionInfoCell *)cell;
-    [_cell willDisplayCell];
-    _cell.titleLabel.text = @"拍卖消息";
-    _cell.subtitleLabel.text = @"您已成功拍下xxx";
-    _cell.timeLabel.text = @"3小时前";
+    TSHomeStoryCell *_nc = (TSHomeStoryCell *)cell;
+    [_nc.titleLabel setText:@"邱特"];
+    [_nc.detailLabel setText:@"拓扑学（tuò pū xué)（topology）是近代发展起来的一个数学分支，用来研究各种“空间”在连续性的变化下不变的性质。在20世纪，拓扑学发展成为数学中一个非常重要的领域。有关拓扑学的一些内容早在十八世纪就出现了。"];
+    _nc.timeLabel.text = @"32分钟前";
+    _nc.responseLabel.text = @"12345条回复";
+    [_nc hideMoreIcon:YES];
 }
 
 #pragma mark - navigation controller
