@@ -14,6 +14,7 @@
 @synthesize responseLabel = _responseLabel;
 @synthesize timeLabel = _timeLabel;
 @synthesize titleIconView = _titleIconView;
+@synthesize zansLabel = _zansLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -41,6 +42,15 @@
         [_responseLabel setTextColor:CUSTOM_COLOR_THEME];
         [_responseLabel setTextAlignment:NSTextAlignmentRight];
         [_containerView addSubview:_responseLabel];
+        
+        _zanIconView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home_zan.png"]];
+        [_containerView addSubview:_zanIconView];
+
+        _zansLabel = [[UILabel alloc] init];
+        [_zansLabel setFont:[UIFont fontWithName:nil size:10.f]];
+        [_zansLabel setTextColor:CUSTOM_COLOR_THEME];
+        [_zansLabel setTextAlignment:NSTextAlignmentCenter];
+        [_containerView addSubview:_zansLabel];
     }
     
     [_titleLabel setFont:[UIFont fontWithName:nil size:12]];
@@ -70,8 +80,16 @@
                                       _containerView.frame.size.height * 0.7)];
     [_responseLabel setFrame:CGRectMake(0,
                                         _containerView.frame.size.height - 20,
-                                        _containerView.frame.size.width - 15,
+                                        _containerView.frame.size.width - 15 - 60,
                                         10)];
+    [_zansLabel setFrame:CGRectMake(_containerView.frame.size.width - 60,
+                                    _containerView.frame.size.height - 20,
+                                    40,
+                                    10)];
+    [_zanIconView setFrame:CGRectMake(_containerView.frame.size.width - 20,
+                                      _containerView.frame.size.height - 20,
+                                      _zanIconView.frame.size.width,
+                                      _zanIconView.frame.size.height)];
     
 }
 

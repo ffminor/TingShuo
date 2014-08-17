@@ -122,6 +122,7 @@
         [_nc.detailLabel setText:@"拓扑学（tuò pū xué)（topology）是近代发展起来的一个数学分支，用来研究各种“空间”在连续性的变化下不变的性质。在20世纪，拓扑学发展成为数学中一个非常重要的领域。有关拓扑学的一些内容早在十八世纪就出现了。"];
         _nc.timeLabel.text = @"32分钟前";
         _nc.responseLabel.text = @"12345条回复";
+        _nc.zansLabel.text = @"1234";
         [_nc hideMoreIcon:YES];
     }
 }

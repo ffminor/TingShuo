@@ -18,12 +18,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wmr-PL-5HF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="-682"/>
+            <point key="canvasLocation" x="-56" y="-1486"/>
         </scene>
-        <!--Home View Controller - Item 1-->
+        <!--Auction View Controller - Item 1-->
         <scene sceneID="XSO-4A-W06">
             <objects>
-                <viewController id="Asv-UA-ztq" customClass="TSHomeViewController" sceneMemberID="viewController">
+                <viewController id="Asv-UA-ztq" customClass="TSAuctionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gKE-VW-iXZ"/>
                         <viewControllerLayoutGuide type="bottom" id="4VI-Kd-ZvS"/>
@@ -38,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpe-nW-CCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="507" y="-1393"/>
+            <point key="canvasLocation" x="515" y="-682"/>
         </scene>
         <!--Mine View Controller - Item-->
         <scene sceneID="NWE-xI-uWR">
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JC1-qJ-ANw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493" y="-682"/>
+            <point key="canvasLocation" x="515" y="-1486"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="o4Y-qI-Hn9">
@@ -125,12 +125,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Asv-UA-ztq" kind="relationship" relationship="rootViewController" id="rKh-km-8XE"/>
+                        <segue destination="Asv-UA-ztq" kind="relationship" relationship="rootViewController" id="DRy-0l-32L"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8a-tX-QRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-54" y="-1393"/>
+            <point key="canvasLocation" x="-56" y="-682"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="zZj-80-qYh">
@@ -146,7 +146,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCl-fq-icD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="130"/>
+            <point key="canvasLocation" x="-56" y="130"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

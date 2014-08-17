@@ -15,11 +15,15 @@
     UIImageView                 *_titleIconView;
     UILabel                     *_timeLabel;
     UILabel                     *_responseLabel;
+    
+    UIImageView                 *_zanIconView;
+    UILabel                     *_zansLabel;
 }
 
 @property (nonatomic, readonly) UILabel             *detailLabel;
 @property (nonatomic, readonly) UIImageView         *titleIconView;
 @property (nonatomic, readonly) UILabel             *timeLabel;
 @property (nonatomic, readonly) UILabel             *responseLabel;
+@property (nonatomic, readonly) UILabel             *zansLabel;
 
 @end
