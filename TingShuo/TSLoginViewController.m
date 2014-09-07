@@ -9,8 +9,10 @@
 #import "TSLoginViewController.h"
 #import "AFNetworking.h"
 
-NSString *TSLoginServerUrl = @"http://42.121.144.167/?type=reg&acc=123&pwd=456";
-NSString *TSRegisterServerUrl = @"http://42.121.144.167/?type=logon&name=123&pwd=456";
+NSString *TSLoginServerUrl                  = @"http://42.121.144.167/?type=reg&acc=123&pwd=456";
+NSString *TSRegisterServerUrl               = @"http://42.121.144.167/?type=logon&name=123&pwd=456";
+
+#define TS_LOGIN_URL(userid, pwd)           [NSString stringWithFormat:@"http://42.121.144.167/?type=logon&name=%@&pwd=%@", userid, pwd]
 
 @interface TSLoginViewController ()
 
@@ -39,6 +41,7 @@ NSString *TSRegisterServerUrl = @"http://42.121.144.167/?type=logon&name=123&pwd
     _userNameTextField = [[UITextField alloc] initWithFrame:CGRectMake(110, 295, 130, 30)];
     [_userNameTextField.layer setBorderColor:[UIColor blackColor].CGColor];
     [_userNameTextField.layer setBorderWidth:1.0f];
+    _userNameTextField.delegate = self;
     [self.view addSubview:_userNameTextField];
     
     CGRect _user_frame = _userNameTextField.frame;
@@ -46,6 +49,7 @@ NSString *TSRegisterServerUrl = @"http://42.121.144.167/?type=logon&name=123&pwd
     _passwordTextField = [[UITextField alloc] initWithFrame:_user_frame];
     [_passwordTextField.layer setBorderWidth:1.0f];
     [_passwordTextField.layer setBorderColor:[UIColor blackColor].CGColor];
+    _passwordTextField.delegate = self;
     [self.view addSubview:_passwordTextField];
     
     UIPanGestureRecognizer *_panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self
@@ -77,5 +81,32 @@ NSString *TSRegisterServerUrl = @"http://42.121.144.167/?type=logon&name=123&pwd
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSString *_userId = _userNameTextField.text;
+    NSString *_pwd = _passwordTextField.text;
+    
+    NSString *_url_str = TS_LOGIN_URL(_userId, _pwd);
+    NSURL *_url = [NSURL URLWithString:_url_str];
+    
+    AFHTTPRequestOperation *_requset = [[AFHTTPRequestOperation alloc]
+                                        initWithRequest:[NSURLRequest requestWithURL:_url]];
+    [_requset setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"登录请求成功！请求链接：%@", _url);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"登录请求失败！请求链接：%@", _url);
+    }];
+    
+    [_requset start];
+    return YES;
+}
 
 @end

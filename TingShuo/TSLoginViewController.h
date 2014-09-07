@@ -10,7 +10,7 @@
 
 extern NSString *TSLoginServerUrl;
 
-@interface TSLoginViewController : UIViewController
+@interface TSLoginViewController : UIViewController<UITextFieldDelegate>
 {
     UIImageView                     *_backgroundImageView;
     UITextField                     *_userNameTextField;
