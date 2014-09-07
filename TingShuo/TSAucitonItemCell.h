@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface TSAucitonItemCell : UITableViewCell
+{
+    UILabel                     *_itemNameLabel;
+    UILabel                     *_priceLabel;
+    UILabel                     *_capicityLabel;
+    UILabel                     *_remainedTimeLabel;
+    
+    UIButton                    *_demandButton;
+}
 
 @end
