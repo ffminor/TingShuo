@@ -36,12 +36,12 @@
     _auctionList = [[UITableView alloc] initWithFrame:self.view.bounds
                                                 style:UITableViewStylePlain];
     [_auctionList setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [_auctionList setBackgroundColor:CUSTOM_COLOR_BKG];
+    [_auctionList setBackgroundColor:TS_COLOR_BKG];
     _auctionList.delegate = self;
     _auctionList.dataSource = self;
     [self.view addSubview:_auctionList];
     
-    [self.view setBackgroundColor:CUSTOM_COLOR_BKG];
+    [self.view setBackgroundColor:TS_COLOR_BKG];
 }
 
 #pragma mark - table view delegate

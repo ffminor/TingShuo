@@ -15,6 +15,6 @@
     #import <Foundation/Foundation.h>
 #endif
 
-#define CUSTOM_COLOR_BKG        [UIColor colorWithRed:(CGFloat)0xF0/0xFF green:(CGFloat)0xF0/0xFF blue:(CGFloat)0xF0/0xFF alpha:1]
-#define CUSTOM_COLOR_SUBTILTE   [UIColor blackColor]
-#define CUSTOM_COLOR_THEME      [UIColor colorWithRed:(CGFloat)0x30/0xFF green:(CGFloat)0x69/0xFF blue:(CGFloat)0xB1/0xFF alpha:1]
+#define TS_COLOR_BKG        [UIColor colorWithRed:(CGFloat)0xF0/0xFF green:(CGFloat)0xF0/0xFF blue:(CGFloat)0xF0/0xFF alpha:1]
+#define TS_COLOR_SUBTILTE   [UIColor blackColor]
+#define TS_COLOR_THEME      [UIColor colorWithRed:(CGFloat)0x30/0xFF green:(CGFloat)0x69/0xFF blue:(CGFloat)0xB1/0xFF alpha:1]

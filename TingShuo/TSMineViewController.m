@@ -15,7 +15,7 @@ NSString *_titles[] = {@"头像", @"昵称", @"年龄", @"我的拍卖", @"我�
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view setBackgroundColor:CUSTOM_COLOR_BKG];
+    [self.view setBackgroundColor:TS_COLOR_BKG];
     
     [self.navigationController.navigationBar setTranslucent:NO];
     
@@ -65,7 +65,7 @@ NSString *_titles[] = {@"头像", @"昵称", @"年龄", @"我的拍卖", @"我�
     }
     
     _cell.backgroundColor = [UIColor whiteColor];
-    _cell.textLabel.textColor = CUSTOM_COLOR_THEME;
+    _cell.textLabel.textColor = TS_COLOR_THEME;
     _cell.textLabel.font = [UIFont fontWithName:nil size:13];
     _cell.textLabel.text = _titles[indexPath.row + indexPath.section * 5];
     

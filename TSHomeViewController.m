@@ -20,7 +20,7 @@
     [super viewDidLoad];
     
     _tableView = [[UITableView alloc] init];
-    [_tableView setBackgroundColor:CUSTOM_COLOR_BKG];
+    [_tableView setBackgroundColor:TS_COLOR_BKG];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];

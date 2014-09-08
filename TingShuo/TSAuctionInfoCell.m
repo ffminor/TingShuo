@@ -19,7 +19,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if ( self ) {
         _subtitleLabel = [[UILabel alloc] init];
-        [_subtitleLabel setTextColor:CUSTOM_COLOR_SUBTILTE];
+        [_subtitleLabel setTextColor:TS_COLOR_SUBTILTE];
         [_subtitleLabel setFont:[UIFont fontWithName:nil size:12]];
         [_containerView addSubview:_subtitleLabel];
         
@@ -28,11 +28,11 @@
         
         _timeLabel = [[UILabel alloc] init];
         [_timeLabel setFont:[UIFont fontWithName:nil size:12]];
-        [_timeLabel setTextColor:CUSTOM_COLOR_SUBTILTE];
+        [_timeLabel setTextColor:TS_COLOR_SUBTILTE];
         [_timeLabel setTextAlignment:NSTextAlignmentRight];
         [_containerView addSubview:_timeLabel];
         
-        [_titleLabel setTextColor:CUSTOM_COLOR_THEME];
+        [_titleLabel setTextColor:TS_COLOR_THEME];
         
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
         

@@ -36,7 +36,7 @@
 
 - (void)willDisplayCell
 {
-    [self setBackgroundColor:CUSTOM_COLOR_BKG];
+    [self setBackgroundColor:TS_COLOR_BKG];
     [_containerView setBackgroundColor:[UIColor whiteColor]];
 }
 

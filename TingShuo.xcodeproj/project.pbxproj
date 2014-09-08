@@ -59,7 +59,7 @@
 		202F45B319718ED50051FCF1 /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 202F459719718ED50051FCF1 /* navbar@2x.png */; };
 		202F45B419718ED50051FCF1 /* 18.png in Resources */ = {isa = PBXBuildFile; fileRef = 202F459819718ED50051FCF1 /* 18.png */; };
 		202F45B519718ED50051FCF1 /* 19.png in Resources */ = {isa = PBXBuildFile; fileRef = 202F459919718ED50051FCF1 /* 19.png */; };
-		202F45B619718ED50051FCF1 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 202F459A19718ED50051FCF1 /* default@2x.png */; };
+		202F45B619718ED50051FCF1 /* login_bak@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 202F459A19718ED50051FCF1 /* login_bak@2x.png */; };
 		202F45B719718ED50051FCF1 /* 21.png in Resources */ = {isa = PBXBuildFile; fileRef = 202F459B19718ED50051FCF1 /* 21.png */; };
 		202F45B819718ED50051FCF1 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = 202F459C19718ED50051FCF1 /* 22.png */; };
 		202F45B919718ED50051FCF1 /* login_username@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 202F459D19718ED50051FCF1 /* login_username@2x.png */; };
@@ -182,7 +182,7 @@
 		202F459719718ED50051FCF1 /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
 		202F459819718ED50051FCF1 /* 18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 18.png; sourceTree = "<group>"; };
 		202F459919718ED50051FCF1 /* 19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 19.png; sourceTree = "<group>"; };
-		202F459A19718ED50051FCF1 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
+		202F459A19718ED50051FCF1 /* login_bak@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_bak@2x.png"; sourceTree = "<group>"; };
 		202F459B19718ED50051FCF1 /* 21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 21.png; sourceTree = "<group>"; };
 		202F459C19718ED50051FCF1 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
 		202F459D19718ED50051FCF1 /* login_username@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_username@2x.png"; sourceTree = "<group>"; };
@@ -354,7 +354,7 @@
 				202F459719718ED50051FCF1 /* navbar@2x.png */,
 				202F459819718ED50051FCF1 /* 18.png */,
 				202F459919718ED50051FCF1 /* 19.png */,
-				202F459A19718ED50051FCF1 /* default@2x.png */,
+				202F459A19718ED50051FCF1 /* login_bak@2x.png */,
 				202F459B19718ED50051FCF1 /* 21.png */,
 				202F459C19718ED50051FCF1 /* 22.png */,
 				202F459D19718ED50051FCF1 /* login_username@2x.png */,
@@ -574,7 +574,7 @@
 				203247E319B2E6E90049A246 /* login_bkg@2x.jpg in Resources */,
 				202F45AD19718ED50051FCF1 /* 07.png in Resources */,
 				200A707E19BCBCE300C8DFA7 /* .cocoadocs.yml in Resources */,
-				202F45B619718ED50051FCF1 /* default@2x.png in Resources */,
+				202F45B619718ED50051FCF1 /* login_bak@2x.png in Resources */,
 				202F45A819718ED50051FCF1 /* nav_title@2x.png in Resources */,
 				202F45BF19718ED50051FCF1 /* 29.png in Resources */,
 				207A7883194DCC1B00C08579 /* Images.xcassets in Resources */,

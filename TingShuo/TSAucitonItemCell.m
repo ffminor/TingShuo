@@ -42,7 +42,7 @@
         _demandButton = [[UIButton alloc] init];
         [_demandButton setFrame:CGRectMake(250, 50, 60, 30)];
         [_demandButton.titleLabel setFont:[UIFont fontWithName:nil size:14]];
-        [_demandButton setTitleColor:CUSTOM_COLOR_THEME forState:UIControlStateNormal];
+        [_demandButton setTitleColor:TS_COLOR_THEME forState:UIControlStateNormal];
         [_demandButton setTitle:@"出价" forState:UIControlStateNormal];
         [self addSubview:_demandButton];
     }

@@ -36,12 +36,12 @@
     _storyList = [[UITableView alloc] initWithFrame:self.view.bounds
                                                 style:UITableViewStylePlain];
     [_storyList setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [_storyList setBackgroundColor:CUSTOM_COLOR_BKG];
+    [_storyList setBackgroundColor:TS_COLOR_BKG];
     _storyList.delegate = self;
     _storyList.dataSource = self;
     [self.view addSubview:_storyList];
     
-    [self.view setBackgroundColor:CUSTOM_COLOR_BKG];
+    [self.view setBackgroundColor:TS_COLOR_BKG];
 }
 
 #pragma mark - table view delegate

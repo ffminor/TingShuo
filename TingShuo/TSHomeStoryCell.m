@@ -39,7 +39,7 @@
         
         _responseLabel = [[UILabel alloc] init];
         [_responseLabel setFont:[UIFont fontWithName:nil size:10.f]];
-        [_responseLabel setTextColor:CUSTOM_COLOR_THEME];
+        [_responseLabel setTextColor:TS_COLOR_THEME];
         [_responseLabel setTextAlignment:NSTextAlignmentRight];
         [_containerView addSubview:_responseLabel];
         
@@ -48,7 +48,7 @@
 
         _zansLabel = [[UILabel alloc] init];
         [_zansLabel setFont:[UIFont fontWithName:nil size:10.f]];
-        [_zansLabel setTextColor:CUSTOM_COLOR_THEME];
+        [_zansLabel setTextColor:TS_COLOR_THEME];
         [_zansLabel setTextAlignment:NSTextAlignmentCenter];
         [_containerView addSubview:_zansLabel];
     }
