@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Nea-c9-1mQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller - Item-->
+        <!--Item-->
         <scene sceneID="IE2-xN-Sfd">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Pwc-nH-fmM" sceneMemberID="viewController">
@@ -20,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="1816" y="-1806"/>
         </scene>
-        <!--Auction View Controller - Item 1-->
+        <!--Item 1-->
         <scene sceneID="XSO-4A-W06">
             <objects>
                 <viewController id="Asv-UA-ztq" customClass="TSAuctionViewController" sceneMemberID="viewController">
@@ -40,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="2387" y="-1002"/>
         </scene>
-        <!--Mine View Controller - Item-->
+        <!--Item-->
         <scene sceneID="NWE-xI-uWR">
             <objects>
                 <viewController id="zSf-9a-V3Z" customClass="TSMineViewController" sceneMemberID="viewController">
@@ -60,44 +61,10 @@
             </objects>
             <point key="canvasLocation" x="2365" y="-190"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="jmA-6l-FBb">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="Nea-c9-1mQ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KUe-hu-CGh">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="mb6-Zi-0Zr" kind="relationship" relationship="rootViewController" id="cTB-fq-iOs"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4D6-zF-Yrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="629" y="-1002"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="N7h-Td-9VT">
-            <objects>
-                <viewController id="mb6-Zi-0Zr" customClass="TSLoginViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9I6-WN-vi7"/>
-                        <viewControllerLayoutGuide type="bottom" id="GUb-HF-3DE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NMW-yf-PK4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ThL-f3-Qaj"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zl4-yx-3TW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="998" y="-299"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jHi-Oy-cMK">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="6ZP-9p-NbZ" customClass="TSTabBarController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="maintabbar" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6ZP-9p-NbZ" customClass="TSTabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="8SH-cr-DoI"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="6r9-vS-GbX">
@@ -115,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="1197" y="-1002"/>
         </scene>
-        <!--Home View Controller - Item 2-->
+        <!--Item 2-->
         <scene sceneID="tPq-cC-iOv">
             <objects>
                 <viewController id="jwE-Bd-veR" customClass="TSHomeViewController" sceneMemberID="viewController">
@@ -135,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="2387" y="-1806"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Item-->
         <scene sceneID="o4Y-qI-Hn9">
             <objects>
                 <navigationController definesPresentationContext="YES" id="whu-HL-Fix" sceneMemberID="viewController">
@@ -151,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="1816" y="-1002"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Item-->
         <scene sceneID="zZj-80-qYh">
             <objects>
                 <navigationController definesPresentationContext="YES" id="auw-9n-sfn" sceneMemberID="viewController">

@@ -9,6 +9,8 @@
 #import "TSLoginViewController.h"
 #import "AFNetworking.h"
 
+#import "TSTabBarController.h"
+
 NSString *TSLoginServerUrl                  = @"http://42.121.144.167/?type=reg&acc=123&pwd=456";
 NSString *TSRegisterServerUrl               = @"http://42.121.144.167/?type=logon&name=123&pwd=456";
 
@@ -28,6 +30,9 @@ NSString *kTSLoginFailed                    = @"logon failed.";
 #define LOG_TEXT_FIELD_RIGHT_MARGIM         LOG_SEPERATOR_MARGIN
 
 #define LOG_ICON_WIDTH                      50.f
+
+#define LOGIN_FAILED_WIDTH                  200.f
+#define LOGIN_FAILED_HEIGHT                 120.f
 
 @interface TSLoginViewController ()
 
@@ -142,7 +147,21 @@ NSString *kTSLoginFailed                    = @"logon failed.";
                                                                                   action:@selector(_actionPan)];
     [self.view addGestureRecognizer:_panGesture];
     
-    // Do any additional setup after loading the view.
+    // login failed view
+    
+    _loginFailedLabel = [[UILabel alloc] init];
+    [_loginFailedLabel.layer setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5].CGColor];
+    [_loginFailedLabel setAlpha:0];
+    [_loginFailedLabel setFrame:CGRectMake(0.5 * (self.view.bounds.size.width - LOGIN_FAILED_WIDTH),
+                                           0.5 * ([UIScreen mainScreen].bounds.size.height - LOGIN_FAILED_HEIGHT ),
+                                           LOGIN_FAILED_WIDTH,
+                                           LOGIN_FAILED_HEIGHT)];
+    [_loginFailedLabel setTextColor:[UIColor whiteColor]];
+    [_loginFailedLabel setText:@"登录失败：用户名或密码错误！"];
+    [_loginFailedLabel setFont:[UIFont fontWithName:nil size:12.f]];
+    [_loginFailedLabel setTextAlignment:NSTextAlignmentCenter];
+    [_loginFailedLabel.layer setCornerRadius:3.0f];
+    [self.view addSubview:_loginFailedLabel];
 }
 
 - (void)didReceiveMemoryWarning
@@ -187,22 +206,48 @@ NSString *kTSLoginFailed                    = @"logon failed.";
                                         initWithRequest:[NSURLRequest requestWithURL:_url]];
     [_request setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"登录请求成功！请求链接：%@", _url);
-        NSLog(@"%@", responseObject);
         NSData *_data = responseObject;
         char *_buffer = (char *)[_data bytes];
         NSString *_result = [NSString stringWithCString:_buffer encoding:NSStringEncodingConversionAllowLossy];
         if ( [_result isEqualToString:kTSLoginFailed] ) {
-            NSLog(@"登录验证失败！");
+            [self _actionLoginFail];
         } else {
-            NSLog(@"登录验证成功！");
+            [self _actionLoginSuccess];
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"登录请求失败！请求链接：%@", _url);
+        [self _actionLoginNetworkIssue];
     }];
     
     [_request start];
     return YES;
+}
+
+#pragma mark - action login result
+
+- (void)_actionLoginFail
+{
+    [UIView animateWithDuration:0.3f animations:^{
+        [_loginFailedLabel setAlpha:1];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.3f delay:1.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [_loginFailedLabel setAlpha:0];
+        } completion:nil];
+    }];
+}
+
+- (void)_actionLoginSuccess
+{
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    TSTabBarController *next = [board instantiateViewControllerWithIdentifier:@"maintabbar"];
+    [self.navigationController pushViewController:next animated:YES];
+    
+    [_userNameTextField resignFirstResponder];
+    [_passwordTextField resignFirstResponder];
+}
+
+- (void)_actionLoginNetworkIssue
+{
 }
 
 @end

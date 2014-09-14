@@ -21,6 +21,8 @@ extern NSString *TSLoginServerUrl;
     UIButton                        *_forgetPwdButton;
     
     UIButton                        *_loginButton;
+    
+    UILabel                         *_loginFailedLabel;
 }
 
 @end

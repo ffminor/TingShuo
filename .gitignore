@@ -8,3 +8,13 @@ Release/
 obj/  
 DerivedData/
 qietu/
+
+ThirdParties/AFNetworking/.cocoadocs.yml
+ThirdParties/AFNetworking/.gitignore
+ThirdParties/AFNetworking/.travis.yml
+ThirdParties/AFNetworking/AFNetworking.podspec
+ThirdParties/AFNetworking/CHANGES
+ThirdParties/AFNetworking/CONTRIBUTING.md
+ThirdParties/AFNetworking/Example/
+ThirdParties/AFNetworking/Rakefile
+ThirdParties/AFNetworking/Tests/
