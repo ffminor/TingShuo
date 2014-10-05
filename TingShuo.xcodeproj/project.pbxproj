@@ -74,11 +74,6 @@
 		204E4D4719DE768200637235 /* reg_usr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204E4D4519DE768200637235 /* reg_usr@2x.png */; };
 		204E4D4D19DE968500637235 /* TSDataBaseAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E4D4C19DE968500637235 /* TSDataBaseAction.swift */; };
 		205BC221198E9D2B004206DD /* TSStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205BC220198E9D2B004206DD /* TSStoryViewController.m */; };
-		205F10B419E1C6EE006F6259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F10B319E1C6EE006F6259 /* AppDelegate.swift */; };
-		205F10B619E1C6EE006F6259 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F10B519E1C6EE006F6259 /* ViewController.swift */; };
-		205F10B919E1C6EE006F6259 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205F10B719E1C6EE006F6259 /* Main.storyboard */; };
-		205F10BB19E1C6EE006F6259 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205F10BA19E1C6EE006F6259 /* Images.xcassets */; };
-		205F10BE19E1C6EE006F6259 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205F10BC19E1C6EE006F6259 /* LaunchScreen.xib */; };
 		206BF52C19C5703D0043ECBD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 206BF52B19C5703D0043ECBD /* Login.storyboard */; };
 		206BF53619C57A510043ECBD /* TSRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BF53519C57A510043ECBD /* TSRegisterViewController.swift */; };
 		207A786B194DCC1B00C08579 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207A786A194DCC1B00C08579 /* Foundation.framework */; };
@@ -192,13 +187,6 @@
 		204E4D4C19DE968500637235 /* TSDataBaseAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSDataBaseAction.swift; sourceTree = "<group>"; };
 		205BC21F198E9D2B004206DD /* TSStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSStoryViewController.h; sourceTree = "<group>"; };
 		205BC220198E9D2B004206DD /* TSStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSStoryViewController.m; sourceTree = "<group>"; };
-		205F10AF19E1C6EE006F6259 /* DataCacheDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCacheDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		205F10B219E1C6EE006F6259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		205F10B319E1C6EE006F6259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		205F10B519E1C6EE006F6259 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		205F10B819E1C6EE006F6259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		205F10BA19E1C6EE006F6259 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		205F10BD19E1C6EE006F6259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		206BF52B19C5703D0043ECBD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		206BF53419C578640043ECBD /* TingShuo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TingShuo-Bridging-Header.h"; sourceTree = "<group>"; };
 		206BF53519C57A510043ECBD /* TSRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSRegisterViewController.swift; sourceTree = "<group>"; };
@@ -223,13 +211,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		205F10AC19E1C6EE006F6259 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		207A7864194DCC1B00C08579 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,27 +362,6 @@
 			name = TabController;
 			sourceTree = "<group>";
 		};
-		205F10B019E1C6EE006F6259 /* DataCacheDemo */ = {
-			isa = PBXGroup;
-			children = (
-				205F10B319E1C6EE006F6259 /* AppDelegate.swift */,
-				205F10B519E1C6EE006F6259 /* ViewController.swift */,
-				205F10B719E1C6EE006F6259 /* Main.storyboard */,
-				205F10BA19E1C6EE006F6259 /* Images.xcassets */,
-				205F10BC19E1C6EE006F6259 /* LaunchScreen.xib */,
-				205F10B119E1C6EE006F6259 /* Supporting Files */,
-			);
-			path = DataCacheDemo;
-			sourceTree = "<group>";
-		};
-		205F10B119E1C6EE006F6259 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				205F10B219E1C6EE006F6259 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		206BF52D19C575FA0043ECBD /* Pages */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,7 +386,6 @@
 			isa = PBXGroup;
 			children = (
 				207A7870194DCC1B00C08579 /* TingShuo */,
-				205F10B019E1C6EE006F6259 /* DataCacheDemo */,
 				207A7869194DCC1B00C08579 /* Frameworks */,
 				207A7868194DCC1B00C08579 /* Products */,
 			);
@@ -436,7 +395,6 @@
 			isa = PBXGroup;
 			children = (
 				207A7867194DCC1B00C08579 /* TingShuo.app */,
-				205F10AF19E1C6EE006F6259 /* DataCacheDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -495,23 +453,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		205F10AE19E1C6EE006F6259 /* DataCacheDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 205F10CB19E1C6EE006F6259 /* Build configuration list for PBXNativeTarget "DataCacheDemo" */;
-			buildPhases = (
-				205F10AB19E1C6EE006F6259 /* Sources */,
-				205F10AC19E1C6EE006F6259 /* Frameworks */,
-				205F10AD19E1C6EE006F6259 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DataCacheDemo;
-			productName = DataCacheDemo;
-			productReference = 205F10AF19E1C6EE006F6259 /* DataCacheDemo.app */;
-			productType = "com.apple.product-type.application";
-		};
 		207A7866194DCC1B00C08579 /* TingShuo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 207A7899194DCC1C00C08579 /* Build configuration list for PBXNativeTarget "TingShuo" */;
@@ -537,9 +478,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				TargetAttributes = {
-					205F10AE19E1C6EE006F6259 = {
-						CreatedOnToolsVersion = 6.0;
-					};
 					207A7866194DCC1B00C08579 = {
 						DevelopmentTeam = 38F3XCC23E;
 					};
@@ -559,22 +497,11 @@
 			projectRoot = "";
 			targets = (
 				207A7866194DCC1B00C08579 /* TingShuo */,
-				205F10AE19E1C6EE006F6259 /* DataCacheDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		205F10AD19E1C6EE006F6259 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				205F10B919E1C6EE006F6259 /* Main.storyboard in Resources */,
-				205F10BE19E1C6EE006F6259 /* LaunchScreen.xib in Resources */,
-				205F10BB19E1C6EE006F6259 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		207A7865194DCC1B00C08579 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -624,15 +551,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		205F10AB19E1C6EE006F6259 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				205F10B619E1C6EE006F6259 /* ViewController.swift in Sources */,
-				205F10B419E1C6EE006F6259 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		207A7863194DCC1B00C08579 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -677,22 +595,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		205F10B719E1C6EE006F6259 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				205F10B819E1C6EE006F6259 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		205F10BC19E1C6EE006F6259 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				205F10BD19E1C6EE006F6259 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 		207A7873194DCC1B00C08579 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -712,39 +614,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		205F10CC19E1C6EE006F6259 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DataCacheDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		205F10CD19E1C6EE006F6259 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = DataCacheDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		207A7897194DCC1C00C08579 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -869,14 +738,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		205F10CB19E1C6EE006F6259 /* Build configuration list for PBXNativeTarget "DataCacheDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				205F10CC19E1C6EE006F6259 /* Debug */,
-				205F10CD19E1C6EE006F6259 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		207A7862194DCC1B00C08579 /* Build configuration list for PBXProject "TingShuo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

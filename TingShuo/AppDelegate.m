@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TingShuo-swift.h"
 
 @implementation AppDelegate
 
@@ -14,6 +15,11 @@
 {
     // Override point for customization after application launch.
     [application setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+    
+    TSDataBaseAction *_dataBaseAction = [[TSDataBaseAction alloc] init];
+    [_dataBaseAction openDataBase:@"newDataBase"];
+    [_dataBaseAction createTable:@"newTable"];
+    
     return YES;
 }
 							
