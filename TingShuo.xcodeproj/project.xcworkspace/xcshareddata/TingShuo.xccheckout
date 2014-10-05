@@ -26,7 +26,7 @@
 		<key>ADB27511A541F979C523E7EC796FC58C6CF98DFB</key>
 		<string>../..</string>
 		<key>DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8</key>
-		<string>../../ThirdParties/AFNetworking/</string>
+		<string>../../ThirdParties/AFNetworking</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/ffminor/TingShuo.git</string>

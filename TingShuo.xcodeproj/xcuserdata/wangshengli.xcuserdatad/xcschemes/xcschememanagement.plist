@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DataCacheDemo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>TingShuo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,26 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>205F108819E1C675006F6259</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>205F109C19E1C675006F6259</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>205F10AE19E1C6EE006F6259</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>205F10C219E1C6EE006F6259</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>207A7866194DCC1B00C08579</key>
 		<dict>
 			<key>primary</key>

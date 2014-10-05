@@ -17,7 +17,7 @@ extern NSString *TSLoginServerUrl;
     UITextField                     *_userNameTextField;
     UITextField                     *_passwordTextField;
     
-    UIButton                        *_registerButton;
+    IBOutlet UIButton               *_registerButton;
     UIButton                        *_forgetPwdButton;
     
     UIButton                        *_loginButton;

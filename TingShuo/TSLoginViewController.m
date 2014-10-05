@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 
 #import "TSTabBarController.h"
+#import "TingShuo-swift.h"
 
 NSString *TSLoginServerUrl                  = @"http://42.121.144.167/?type=reg&acc=123&pwd=456";
 NSString *TSRegisterServerUrl               = @"http://42.121.144.167/?type=logon&name=123&pwd=456";
@@ -17,7 +18,7 @@ NSString *TSRegisterServerUrl               = @"http://42.121.144.167/?type=logo
 NSString *kTSLoginFailed                    = @"logon failed.";
 
 #define TS_LOGIN_URL(userid, pwd)           [NSString stringWithFormat:@"http://42.121.144.167/?type=logon&acc=%@&psw=%@", userid, pwd]
-#define TS_REGISTER_URL(userid, pwd)        [NSString stringWithFormat:@"http://42.121.144.167/?type=reg&namw=%@&pwd=%@", userid, pwd]
+#define TS_REGISTER_URL(userid, pwd)        [NSString stringWithFormat:@"http://42.121.144.167/?type=reg&acc=%@&psw=%@", userid, pwd]
 
 #define LOG_CONTAINER_X                     65.f
 #define LOG_CONTAINER_Y                     285.f
@@ -52,8 +53,10 @@ NSString *kTSLoginFailed                    = @"logon failed.";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self.navigationController.navigationBar setHidden:YES];
+    [self.navigationController.navigationBar setTintColor:[UIColor clearColor]];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithCIImage:[CIImage imageWithColor:[CIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.1]]] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+    [self.navigationController.navigationBar setTranslucent:YES];
     
     _backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"login_bak.png"]];
     [self.view addSubview:_backgroundImageView];
@@ -64,14 +67,14 @@ NSString *kTSLoginFailed                    = @"logon failed.";
                                          LOG_CONTAINER_Y,
                                          (self.view.bounds.size.width - LOG_CONTAINER_X * 2 ),
                                          LOG_CONTAINER_H)];
-    [_loginContainer setBackgroundColor:TS_COLOR_BKG];
+    [_loginContainer setBackgroundColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5]];
     [self.view addSubview:_loginContainer];
     
     UIView *_seperator = [[UIView alloc] init];
     [_seperator setFrame:CGRectMake(LOG_SEPERATOR_MARGIN, _loginContainer.bounds.size.height * 0.5,
                                     _loginContainer.bounds.size.width - 2 * LOG_SEPERATOR_MARGIN,
                                     1)];
-    [_seperator setBackgroundColor:LOG_SEPERATOR_COLOR];
+    [_seperator setBackgroundColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5]];
     [_loginContainer addSubview:_seperator];
     
     UIImageView *_userIcon = [[UIImageView alloc] init];
@@ -96,6 +99,7 @@ NSString *kTSLoginFailed                    = @"logon failed.";
                                                    _loginContainer.bounds.size.width - LOG_TEXT_FIELD_X - LOG_TEXT_FIELD_RIGHT_MARGIM,
                                                    0.5 * _loginContainer.bounds.size.height)];
     _userNameTextField.font = [UIFont fontWithName:nil size:13];
+    _userNameTextField.textColor = [UIColor whiteColor];
     _userNameTextField.placeholder = @"输入手机号";
     _userNameTextField.delegate = self;
     [_loginContainer addSubview:_userNameTextField];
@@ -104,13 +108,14 @@ NSString *kTSLoginFailed                    = @"logon failed.";
     _user_frame.origin.y += 0.5 * _loginContainer.bounds.size.height;
     _passwordTextField = [[UITextField alloc] initWithFrame:_user_frame];
     _passwordTextField.font = [UIFont fontWithName:nil size:12];
+    _passwordTextField.textColor = [UIColor whiteColor];
     _passwordTextField.placeholder = @"输入密码";
     _passwordTextField.delegate = self;
     [_loginContainer addSubview:_passwordTextField];
     
     // register & forget pwd
     
-    _registerButton = [[UIButton alloc] init];
+    // _registerButton = [[UIButton alloc] init];
     [_registerButton setFrame:CGRectMake(_loginContainer.frame.origin.x,
                                          _loginContainer.frame.origin.y + _loginContainer.bounds.size.height + 5,
                                          50,
@@ -118,7 +123,7 @@ NSString *kTSLoginFailed                    = @"logon failed.";
     [_registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_registerButton setTitle:@"马上注册" forState:UIControlStateNormal];
     [_registerButton.titleLabel setFont:[UIFont fontWithName:nil size:12]];
-    [self.view addSubview:_registerButton];
+    [self.view bringSubviewToFront:_registerButton];
     
     _forgetPwdButton = [[UIButton alloc] init];
     [_forgetPwdButton setFrame:CGRectMake(_loginContainer.frame.origin.x + _loginContainer.frame.size.width - 50,
@@ -133,14 +138,16 @@ NSString *kTSLoginFailed                    = @"logon failed.";
     // login button 147 * 30
     
     _loginButton = [[UIButton alloc] init];
-    [_loginButton setFrame:CGRectMake(0.5 * (self.view.bounds.size.width - 147),
+    [_loginButton setFrame:CGRectMake(_loginContainer.frame.origin.x,
                                       420,
-                                      147,
+                                      _loginContainer.bounds.size.width,
                                       30)];
     [_loginButton setBackgroundImage:[UIImage imageNamed:@"loginbg.png"]
                             forState:UIControlStateNormal];
     [_loginButton setTitle:@"登录" forState:UIControlStateNormal];
     [_loginButton.titleLabel setFont:[UIFont fontWithName:nil size:12]];
+    [_loginButton addTarget:self action:@selector(_actionLogin)
+           forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_loginButton];
     
     UIPanGestureRecognizer *_panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self
@@ -164,6 +171,17 @@ NSString *kTSLoginFailed                    = @"logon failed.";
     [self.view addSubview:_loginFailedLabel];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+    
+    [_registerButton setFrame:CGRectMake(_loginContainer.frame.origin.x,
+                                         _loginContainer.frame.origin.y + _loginContainer.bounds.size.height + 5,
+                                         50,
+                                         30)];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -175,31 +193,51 @@ NSString *kTSLoginFailed                    = @"logon failed.";
     [_userNameTextField resignFirstResponder];
     [_passwordTextField resignFirstResponder];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 #pragma mark - UITextFieldDelegate
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    
+    [UIView animateWithDuration:0.3f animations:^{
+        [_loginContainer setTransform:CGAffineTransformIdentity];
+    }];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     NSString *_userId = _userNameTextField.text;
     NSString *_pwd = _passwordTextField.text;
+    [self _actionLoginWithName:_userId password:_pwd];
+    return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    CGAffineTransform _tranform = CGAffineTransformMakeTranslation(0, -50);
     
-    NSString *_url_str = TS_LOGIN_URL(_userId, _pwd);
+    [UIView animateWithDuration:0.3f animations:^{
+        [_loginContainer setTransform:_tranform];
+    }];
+}
+
+#pragma mark - button action
+
+- (void)_actionRegister
+{
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    TSRegisterViewController *next = [board instantiateViewControllerWithIdentifier:@"register"];
+    [self.navigationController pushViewController:next animated:YES];
+}
+
+- (void)_actionLogin
+{
+    [self _actionLoginWithName:_userNameTextField.text password:_passwordTextField.text];
+}
+
+#pragma mark - action login result
+
+- (void)_actionLoginWithName:(NSString *)name password:(NSString *)pwd
+{
+    NSString *_url_str = TS_LOGIN_URL(name, pwd);
     NSURL *_url = [NSURL URLWithString:_url_str];
     
     AFHTTPRequestOperation *_request = [[AFHTTPRequestOperation alloc]
@@ -220,10 +258,7 @@ NSString *kTSLoginFailed                    = @"logon failed.";
     }];
     
     [_request start];
-    return YES;
 }
-
-#pragma mark - action login result
 
 - (void)_actionLoginFail
 {

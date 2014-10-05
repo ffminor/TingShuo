@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Cpq-oT-gFF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Cpq-oT-gFF">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -8,16 +9,16 @@
         <scene sceneID="JyR-uS-jcd">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Cpq-oT-gFF" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pnG-Ku-e0W">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pnG-Ku-e0W">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="C5w-Dr-ETW" kind="relationship" relationship="rootViewController" id="vgb-00-36Q"/>
+                        <segue destination="C5w-Dr-ETW" kind="relationship" relationship="rootViewController" id="C0m-SV-odR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7PG-jd-KCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335.46666666666664" y="-948.55999999999995"/>
+            <point key="canvasLocation" x="-525" y="-941"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="fZe-OC-q5C">
@@ -28,17 +29,162 @@
                         <viewControllerLayoutGuide type="bottom" id="V1Y-TF-hd3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wuo-AV-U07">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O72-4Z-GK7" userLabel="registerButton">
+                                <rect key="frame" x="47" y="375" width="80" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="马上注册">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UOm-L3-goK" kind="push" id="7hh-Ba-pQd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="aqQ-jZ-55y"/>
+                    <connections>
+                        <outlet property="_registerButton" destination="O72-4Z-GK7" id="Bkk-pk-5v9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TR-yg-bpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335.46666666666664" y="-131.58666666666667"/>
+            <point key="canvasLocation" x="11" y="-941"/>
+        </scene>
+        <!--听说-->
+        <scene sceneID="sfT-DG-DuJ">
+            <objects>
+                <viewController storyboardIdentifier="register" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UOm-L3-goK" customClass="TSRegisterViewController" customModule="TingShuo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8PC-8t-nRM"/>
+                        <viewControllerLayoutGuide type="bottom" id="VJx-5m-4my"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ODh-AC-7V0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reg_bg@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="RKt-gV-1LJ" userLabel="backgroundImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5lx-dz-5v3" userLabel="container">
+                                <rect key="frame" x="0.0" y="264" width="320" height="106"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zho-ZR-SCw" userLabel="seperatorLine">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Adh-ex-Qnx" userLabel="seperatorLine">
+                                        <rect key="frame" x="0.0" y="53" width="320" height="0.5"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bd5-Pc-Xxm" userLabel="seperatorLine">
+                                        <rect key="frame" x="0.0" y="105.5" width="320" height="0.5"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="邮箱/手机号/用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRv-Cf-jeS" userLabel="emailTextField">
+                                        <rect key="frame" x="84" y="12" width="217" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="6 ~ 20 个字符" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Z3-21-5UC" userLabel="pwdTextField">
+                                        <rect key="frame" x="84" y="63" width="216.5" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reg_usr.png" translatesAutoresizingMaskIntoConstraints="NO" id="0nU-1A-OtR">
+                                        <rect key="frame" x="25" y="12" width="24" height="30"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reg_pwd.png" translatesAutoresizingMaskIntoConstraints="NO" id="BAR-fJ-kll">
+                                        <rect key="frame" x="25" y="64" width="24" height="30"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="听说" id="qDR-p1-zH4">
+                        <barButtonItem key="backBarButtonItem" title="登录" id="U20-7g-2jj"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="_container" destination="5lx-dz-5v3" id="k3z-Nc-CcP"/>
+                        <outlet property="_emailTextField" destination="DRv-Cf-jeS" id="Heh-Fu-1jq"/>
+                        <outlet property="_pwdTextField" destination="6Z3-21-5UC" id="xoZ-b1-rCg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n8b-H7-dG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537" y="-941"/>
+        </scene>
+        <!--听说-->
+        <scene sceneID="6a0-tr-xPw">
+            <objects>
+                <viewController storyboardIdentifier="registerUserInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bgy-F7-avx" customClass="TSRegisterUserInfoViewController" customModule="TingShuo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jlt-th-8Lc"/>
+                        <viewControllerLayoutGuide type="bottom" id="nba-fx-zDV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Vg-JH-L4h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reg_bg@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="42w-k2-UXl" userLabel="backgroundImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r5h-Lg-vwQ" userLabel="container">
+                                <rect key="frame" x="0.0" y="231" width="320" height="106"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s3I-dI-IBU" userLabel="seperatorLine">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="69J-gH-HgB" userLabel="seperatorLine">
+                                        <rect key="frame" x="0.0" y="53" width="320" height="0.5"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iUm-lt-45Z" userLabel="seperatorLine">
+                                        <rect key="frame" x="0.0" y="105.5" width="320" height="0.5"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="邮箱/手机号/用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mb2-kI-W65" userLabel="emailTextField">
+                                        <rect key="frame" x="84" y="12" width="217" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="6 ~ 20 个字符" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9bE-m6-h54" userLabel="pwdTextField">
+                                        <rect key="frame" x="84" y="63" width="216.5" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reg_usr.png" translatesAutoresizingMaskIntoConstraints="NO" id="CUL-Iv-2if">
+                                        <rect key="frame" x="25" y="12" width="24" height="30"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reg_pwd.png" translatesAutoresizingMaskIntoConstraints="NO" id="GCV-j7-M8o">
+                                        <rect key="frame" x="25" y="64" width="24" height="30"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="听说" id="vBV-z6-RSz">
+                        <barButtonItem key="backBarButtonItem" title="注册" id="wsY-tK-bSS"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VfB-95-ntf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11" y="-243"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="reg_bg@2x.png" width="320" height="568"/>
+        <image name="reg_pwd.png" width="24" height="30"/>
+        <image name="reg_usr.png" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

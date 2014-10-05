@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import <sqlite3.h>
+
 @interface TSGlobalDataCache : NSObject
 {
     NSString                    *_filePath;
