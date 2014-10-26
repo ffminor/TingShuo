@@ -1,30 +1,18 @@
 //
-//  AppDelegate.m
-//  TingShuo
+//  QiniuDemoAppDelegate.m
+//  QiniuDemo
 //
-//  Created by fminor on 6/15/14.
-//
+//  Created by ltz on 14-2-28.
+//  Copyright (c) 2014年 Qiniu. All rights reserved.
 //
 
-#import "AppDelegate.h"
-#import "TingShuo-swift.h"
-#import "TSKeySignature.h"
+#import "QiniuDemoAppDelegate.h"
 
-@implementation AppDelegate
+@implementation QiniuDemoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [application setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
-    
-    TSDataBaseAction *_dataBaseAction = [[TSDataBaseAction alloc] init];
-    [_dataBaseAction openDataBase:@"newDataBase"];
-    [_dataBaseAction createTable:@"newTable"];
-    
-    UploadTokenManager *_tokenManager = [[UploadTokenManager alloc] init];
-//    NSString *_sha1 = [TSKeySignature hmacSha1:@"MY_SECRET_KEY" text:_tokenManager.message];
-//    NSLog(@"SHA1: %@", _sha1);
-    
     return YES;
 }
 							

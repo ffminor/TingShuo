@@ -12,10 +12,9 @@ import UIKit
 let TSLoginServerUrl                    = "http://42.121.144.167/?type=reg&acc=123&pwd=456"
 let TSRegisterServerUrl                 = "http://42.121.144.167/?type=logon&name=123&pwd=456"
 
-// @define TS_REGISTER_URL(userid, pwd)        [NSString stringWithFormat:@"http://42.121.144.167/?type=reg&namw=%@&pwd=%@", userid, pwd]
-
-
-class TSRegisterViewController: UIViewController, UITextFieldDelegate {
+class TSRegisterViewController:TSBaseViewController,
+    UITextFieldDelegate
+{
 
     @IBOutlet weak var _emailTextField: UITextField!
     @IBOutlet weak var _pwdTextField: UITextField!
@@ -78,6 +77,8 @@ class TSRegisterViewController: UIViewController, UITextFieldDelegate {
     func _actionRegisterSuccess() {
         var _storyBoard:UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
         var _userInfoViewController: TSRegisterUserInfoViewController = _storyBoard.instantiateViewControllerWithIdentifier("registerUserInfo") as TSRegisterUserInfoViewController
+        _userInfoViewController.account = _emailTextField.text;
+        _userInfoViewController.password = _pwdTextField.text;
         self.navigationController?.pushViewController(_userInfoViewController, animated: true)
     }
     
@@ -90,10 +91,10 @@ class TSRegisterViewController: UIViewController, UITextFieldDelegate {
         let _pwd:NSString? = _pwdTextField?.text;
         
         var _urlStr:String = "http://42.121.144.167/?type=reg&acc=" + _email! + "&psw=" + _pwd!
-        let _urlReq:NSURLRequest = NSURLRequest(URL: NSURL(string: _urlStr))
+        let _urlReq:NSURLRequest = NSURLRequest(URL: NSURL(string: _urlStr)!)
         var _request:AFHTTPRequestOperation = AFHTTPRequestOperation(request: _urlReq)
         _request.setCompletionBlockWithSuccess({ (AFHTTPRequestOperation, AnyObject) -> Void in
-            var _dataStr:String = NSString(data:AnyObject as NSData , encoding: NSUTF8StringEncoding)
+            var _dataStr:String = NSString(data:AnyObject as NSData , encoding: NSUTF8StringEncoding)!
             if ( _dataStr == "regist ok." ) {
                 self._actionRegisterSuccess()
             } else {
@@ -106,7 +107,7 @@ class TSRegisterViewController: UIViewController, UITextFieldDelegate {
 
     func textFieldDidBeginEditing(textField: UITextField) {
         UIView.animateWithDuration(0.2,  animations: { () -> Void in
-            var _transform:CGAffineTransform = CGAffineTransformMakeTranslation(0, -50)
+            var _transform:CGAffineTransform = CGAffineTransformMakeTranslation(0, -120)
             self._container.transform = _transform
         })
     }

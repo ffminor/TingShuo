@@ -10,26 +10,26 @@
 	<string>TingShuo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>933E9E20-B9E1-4AB5-AD5B-C7F62F357C4F</key>
-		<string>https://github.com/AFNetworking/AFNetworking.git</string>
+		<key>358B4638CAF7CBEBFA5DCB6A48F80C1AF92AF161</key>
+		<string>https://github.com/qiniu/ios-sdk.git</string>
 		<key>ADB27511A541F979C523E7EC796FC58C6CF98DFB</key>
-		<string>ssh://github.com/ffminor/TingShuo.git</string>
+		<string>github.com:ffminor/TingShuo.git</string>
 		<key>DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8</key>
 		<string>https://github.com/AFNetworking/AFNetworking.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TingShuo.xcodeproj/project.xcworkspace</string>
+	<string>TingShuo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>933E9E20-B9E1-4AB5-AD5B-C7F62F357C4F</key>
-		<string>../../AFNetworking</string>
+		<key>358B4638CAF7CBEBFA5DCB6A48F80C1AF92AF161</key>
+		<string>../..ThirdParties/ios-sdk</string>
 		<key>ADB27511A541F979C523E7EC796FC58C6CF98DFB</key>
 		<string>../..</string>
 		<key>DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8</key>
-		<string>../../ThirdParties/AFNetworking</string>
+		<string>../..ThirdParties/AFNetworking</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/ffminor/TingShuo.git</string>
+	<string>github.com:ffminor/TingShuo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -40,7 +40,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>933E9E20-B9E1-4AB5-AD5B-C7F62F357C4F</string>
+			<string>DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8</string>
 			<key>IDESourceControlWCCName</key>
 			<string>AFNetworking</string>
 		</dict>
@@ -48,9 +48,9 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8</string>
+			<string>358B4638CAF7CBEBFA5DCB6A48F80C1AF92AF161</string>
 			<key>IDESourceControlWCCName</key>
-			<string>AFNetworking</string>
+			<string>ios-sdk</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

@@ -4,5 +4,11 @@
 
 #import "TingShuo-Prefix.pch"
 #import <UIKit/UIKit.h>
+
 #import "AFNetworking.h"
+#import "QiniuSimpleUploader.h"
+
 #import "sqlite3.h"
+#import "TSKeySignature.h"
+
+#import "TSTabBarController.h"
